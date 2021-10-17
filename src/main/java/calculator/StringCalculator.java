@@ -30,5 +30,16 @@ private static int count =0;
     public static int GetCalledCount() {
     	return count;
     }
+    
+    private String getDelimiters(String s) {
+        String[] delimiters = s.substring(3, s.length() - 1).split("]\\[");
+
+        StringBuilder delimiter = new StringBuilder();
+        for (String del : delimiters) {
+            delimiter.append(escapeChars(del)).append("|");
+        }
+        delimiter.deleteCharAt(delimiter.length() - 1);
+        return delimiter.toString();
+    }
 
 }
