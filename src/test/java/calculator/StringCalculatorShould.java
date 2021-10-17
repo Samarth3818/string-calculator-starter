@@ -72,6 +72,12 @@ class StringCalculatorShould {
  	   StringCalculator stringCalculator = new StringCalculator();
     	assertEquals(2, stringCalculator.add("1000,2"));
     }
+    
+    @Test
+    public void testMultiCharDelimiter() throws Exception {
+ 	   StringCalculator stringCalculator = new StringCalculator();
+        assert stringCalculator.add("//[***]\n1***2***3") == 6;
+    }
 }
 
 
