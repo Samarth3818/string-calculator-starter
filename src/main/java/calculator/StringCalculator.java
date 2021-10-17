@@ -2,8 +2,30 @@ package calculator;
 
 class StringCalculator {
 
-    public int add(String input) {
-        return 0;
-    }
+private static int count =0;
+	
+    public int add(String text) {
+    	count++;
+    	int sum = 0;
+    	 if (!text.isEmpty()) {
+             if (text.startsWith("//[")) {
+                 String[] temp = text.split("\n", 2);
+                 String delimiter = getDelimiters(temp[0]);
+                 String numList[]  = splitNumbers(temp[1], delimiter);
+                 sum = sum(numList);
+             } else if (text.startsWith("//")) {
+                 String[] temp = text.split("\n", 2);
+                 String del = temp[0].substring(2);
+                 String numList[]  = splitNumbers(temp[1], escapeChars(del));
+                 sum = sum(numList);
+             } else {
+            	 String numList[]  = splitNumbers(text, "[,\n]");
+            	 sum = sum(numList);
+            	 
+             }
+         }
+  			return sum;
+    		
+    	  }
 
 }
