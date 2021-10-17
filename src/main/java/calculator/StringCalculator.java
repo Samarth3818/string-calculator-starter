@@ -62,5 +62,9 @@ private static int count =0;
 			}
 			return total;
 	}
+    
+    private  int toInt(String number){
+		  return Integer.parseInt(number);
+		}
 
 }
