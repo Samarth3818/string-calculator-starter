@@ -41,5 +41,8 @@ private static int count =0;
         delimiter.deleteCharAt(delimiter.length() - 1);
         return delimiter.toString();
     }
+    private  String[] splitNumbers(String numbers, String divider){
+	    return numbers.split(divider);
+	}
 
 }
