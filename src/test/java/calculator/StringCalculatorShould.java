@@ -66,6 +66,12 @@ class StringCalculatorShould {
         assertEquals(3, stringCalculator.add("1,2"));
         assertEquals(2, StringCalculator.GetCalledCount());
   }
+    
+    @Test
+    public void testOverThousand(){
+ 	   StringCalculator stringCalculator = new StringCalculator();
+    	assertEquals(2, stringCalculator.add("1000,2"));
+    }
 }
 
 
