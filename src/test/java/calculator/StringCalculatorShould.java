@@ -78,6 +78,12 @@ class StringCalculatorShould {
  	   StringCalculator stringCalculator = new StringCalculator();
         assert stringCalculator.add("//[***]\n1***2***3") == 6;
     }
+    
+    @Test
+    public void testMultipleCustomDelimiter() throws Exception {
+ 	   StringCalculator stringCalculator = new StringCalculator();
+        assert stringCalculator.add("//[*][%]\n1*2%3") == 6;
+    }
 }
 
 
