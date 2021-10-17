@@ -58,4 +58,25 @@ class StringCalculatorShould {
 			assertEquals(e.getMessage(), "Negatives not allowed: -4,-5");
 		}
     }
+    
+    @Test
+    public void testGetCalledCount() throws Exception {
+   	StringCalculator stringCalculator = new StringCalculator();
+   	assertEquals(3, stringCalculator.add("//;\n1;2"));
+        assertEquals(3, stringCalculator.add("1,2"));
+        assertEquals(2, StringCalculator.GetCalledCount());
+  }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
