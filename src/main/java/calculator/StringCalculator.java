@@ -27,5 +27,8 @@ private static int count =0;
   			return sum;
     		
     	  }
+    public static int GetCalledCount() {
+    	return count;
+    }
 
 }
